@@ -11,6 +11,7 @@ public class Tester {
 		board.createBoard(8);
 		board.printBoardToConsole();
 		
+		
 	}
 
 }
