@@ -9,6 +9,7 @@ import java.util.Random;
 public class Letter {
 	private static int endRange = 1002;
 	
+	//used by fillBoard() in GameBoard class
 	public static String getLetter() {
 		Random random = new Random();
 		int randomNumber = random.nextInt(endRange + 1);
