@@ -2,6 +2,8 @@ package game;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -50,133 +52,204 @@ public class GameBoardGUI {
 		//not sure if best way to do this
 		//each row should go in it's own panel
 		//each panel can go in middlePanel with BoxLayout
-		middlePanel.setLayout(new BoxLayout(middlePanel, BoxLayout.Y_AXIS));
-		//row 1
-		JPanel row1 = new JPanel();
-		middlePanel.add(row1);
 		
+		//also in the final version each label would not just get a letter from the letter class
+		//but from the GameBoard class
+		GridBagLayout gridBag = new GridBagLayout();
+		GridBagConstraints constraints = new GridBagConstraints();
+		middlePanel.setLayout(gridBag);
+		constraints.fill = GridBagConstraints.BOTH;
+		//for each component to add to middlePanel
+		//create component
+		//set the instance variables in the GridBagConstraints instance
+		
+		//row 1
 		JLabel label1 = new JLabel(Letter.getLetter());
 		label1.setFont(new Font("Courier", Font.BOLD, 36));
-		row1.add(label1);
+		constraints.gridx = 0;
+		constraints.gridy = 0;
+		gridBag.setConstraints(label1, constraints);
+		middlePanel.add(label1);
 		
 		JLabel label2 = new JLabel(Letter.getLetter());
 		label2.setFont(new Font("Courier", Font.BOLD, 36));
-		row1.add(label2);
+		constraints.gridx = 1;
+		constraints.gridy = 0;
+		gridBag.setConstraints(label2, constraints);
+		middlePanel.add(label2);
 		
 		JLabel label3 = new JLabel(Letter.getLetter());
 		label3.setFont(new Font("Courier", Font.BOLD, 36));
-		row1.add(label3);
+		constraints.gridx = 2;
+		constraints.gridy = 0;
+		gridBag.setConstraints(label3, constraints);
+		middlePanel.add(label3);
 		
 		JLabel label4 = new JLabel(Letter.getLetter());
 		label4.setFont(new Font("Courier", Font.BOLD, 36));
-		row1.add(label4);
+		constraints.gridx = 3;
+		constraints.gridy = 0;
+		gridBag.setConstraints(label4, constraints);
+		middlePanel.add(label4);
 		
 		JLabel label5 = new JLabel(Letter.getLetter());
 		label5.setFont(new Font("Courier", Font.BOLD, 36));
-		row1.add(label5);
+		constraints.gridx = 4;
+		constraints.gridy = 0;
+		gridBag.setConstraints(label5, constraints);
+		middlePanel.add(label5);
 		
 		//row 2
-		JPanel row2 = new JPanel();
-		middlePanel.add(row2);
-		
 		JLabel label6 = new JLabel(Letter.getLetter());
 		label6.setFont(new Font("Courier", Font.BOLD, 36));
-		row2.add(label6);
+		constraints.gridx = 0;
+		constraints.gridy = 1;
+		gridBag.setConstraints(label6, constraints);
+		middlePanel.add(label6);
 		
 		JLabel label7 = new JLabel(Letter.getLetter());
 		label7.setFont(new Font("Courier", Font.BOLD, 36));
-		row2.add(label7);
+		constraints.gridx = 1;
+		constraints.gridy = 1;
+		gridBag.setConstraints(label7, constraints);
+		middlePanel.add(label7);
 		
 		JLabel label8 = new JLabel(Letter.getLetter());
 		label8.setFont(new Font("Courier", Font.BOLD, 36));
-		row2.add(label8);
+		constraints.gridx = 2;
+		constraints.gridy = 1;
+		gridBag.setConstraints(label8, constraints);
+		middlePanel.add(label8);
 		
 		JLabel label9 = new JLabel(Letter.getLetter());
 		label9.setFont(new Font("Courier", Font.BOLD, 36));
-		row2.add(label9);
+		constraints.gridx = 3;
+		constraints.gridy = 1;
+		gridBag.setConstraints(label9, constraints);
+		middlePanel.add(label9);
 		
 		JLabel label10 = new JLabel(Letter.getLetter());
 		label10.setFont(new Font("Courier", Font.BOLD, 36));
-		row2.add(label10);
+		constraints.gridx = 4;
+		constraints.gridy = 1;
+		gridBag.setConstraints(label10, constraints);
+		middlePanel.add(label10);
 		
 		//row 3
-		JPanel row3 = new JPanel();
-		middlePanel.add(row3);
-				
 		JLabel label11 = new JLabel(Letter.getLetter());
 		label11.setFont(new Font("Courier", Font.BOLD, 36));
-		row3.add(label11);
-				
+		constraints.gridx = 0;
+		constraints.gridy = 2;
+		gridBag.setConstraints(label11, constraints);
+		middlePanel.add(label11);
+		
 		JLabel label12 = new JLabel(Letter.getLetter());
 		label12.setFont(new Font("Courier", Font.BOLD, 36));
-		row3.add(label12);
-				
+		constraints.gridx = 1;
+		constraints.gridy = 2;
+		gridBag.setConstraints(label12, constraints);
+		middlePanel.add(label12);
+		
 		JLabel label13 = new JLabel(Letter.getLetter());
 		label13.setFont(new Font("Courier", Font.BOLD, 36));
-		row3.add(label13);
-				
+		constraints.gridx = 2;
+		constraints.gridy = 2;
+		gridBag.setConstraints(label13, constraints);
+		middlePanel.add(label13);
+		
 		JLabel label14 = new JLabel(Letter.getLetter());
 		label14.setFont(new Font("Courier", Font.BOLD, 36));
-		row3.add(label14);
-				
+		constraints.gridx = 3;
+		constraints.gridy = 2;
+		gridBag.setConstraints(label14, constraints);
+		middlePanel.add(label14);
+		
 		JLabel label15 = new JLabel(Letter.getLetter());
 		label15.setFont(new Font("Courier", Font.BOLD, 36));
-		row3.add(label15);
+		constraints.gridx = 4;
+		constraints.gridy = 2;
+		gridBag.setConstraints(label15, constraints);
+		middlePanel.add(label15);
 		
 		//row 4
-		JPanel row4 = new JPanel();
-		middlePanel.add(row4);
-				
 		JLabel label16 = new JLabel(Letter.getLetter());
 		label16.setFont(new Font("Courier", Font.BOLD, 36));
-		row4.add(label16);
-				
+		constraints.gridx = 0;
+		constraints.gridy = 3;
+		gridBag.setConstraints(label16, constraints);
+		middlePanel.add(label16);
+		
 		JLabel label17 = new JLabel(Letter.getLetter());
 		label17.setFont(new Font("Courier", Font.BOLD, 36));
-		row4.add(label17);
-				
+		constraints.gridx = 1;
+		constraints.gridy = 3;
+		gridBag.setConstraints(label17, constraints);
+		middlePanel.add(label17);
+		
 		JLabel label18 = new JLabel(Letter.getLetter());
 		label18.setFont(new Font("Courier", Font.BOLD, 36));
-		row4.add(label18);
-				
+		constraints.gridx = 2;
+		constraints.gridy = 3;
+		gridBag.setConstraints(label18, constraints);
+		middlePanel.add(label18);
+		
 		JLabel label19 = new JLabel(Letter.getLetter());
 		label19.setFont(new Font("Courier", Font.BOLD, 36));
-		row4.add(label19);
-				
+		constraints.gridx = 3;
+		constraints.gridy = 3;
+		gridBag.setConstraints(label19, constraints);
+		middlePanel.add(label19);
+		
 		JLabel label20 = new JLabel(Letter.getLetter());
 		label20.setFont(new Font("Courier", Font.BOLD, 36));
-		row4.add(label20);
+		constraints.gridx = 4;
+		constraints.gridy = 3;
+		gridBag.setConstraints(label20, constraints);
+		middlePanel.add(label20);
 		
 		//row 5
-		JPanel row5 = new JPanel();
-		middlePanel.add(row5);
-				
 		JLabel label21 = new JLabel(Letter.getLetter());
 		label21.setFont(new Font("Courier", Font.BOLD, 36));
-		row5.add(label21);
-				
+		constraints.gridx = 0;
+		constraints.gridy = 4;
+		gridBag.setConstraints(label21, constraints);
+		middlePanel.add(label21);
+		
 		JLabel label22 = new JLabel(Letter.getLetter());
 		label22.setFont(new Font("Courier", Font.BOLD, 36));
-		row5.add(label22);
-				
+		constraints.gridx = 1;
+		constraints.gridy = 4;
+		gridBag.setConstraints(label22, constraints);
+		middlePanel.add(label22);
+		
 		JLabel label23 = new JLabel(Letter.getLetter());
 		label23.setFont(new Font("Courier", Font.BOLD, 36));
-		row5.add(label23);
-				
+		constraints.gridx = 2;
+		constraints.gridy = 4;
+		gridBag.setConstraints(label23, constraints);
+		middlePanel.add(label23);
+		
 		JLabel label24 = new JLabel(Letter.getLetter());
 		label24.setFont(new Font("Courier", Font.BOLD, 36));
-		row5.add(label24);
-				
+		constraints.gridx = 3;
+		constraints.gridy = 4;
+		gridBag.setConstraints(label24, constraints);
+		middlePanel.add(label24);
+		
 		JLabel label25 = new JLabel(Letter.getLetter());
 		label25.setFont(new Font("Courier", Font.BOLD, 36));
-		row5.add(label25);
+		constraints.gridx = 4;
+		constraints.gridy = 4;
+		gridBag.setConstraints(label25, constraints);
+		middlePanel.add(label25);
+		
 		//*******************************
 		
 		bottomPanel.add(textfield);
 		bottomPanel.add(scroller);
 		topPanel.add(timeLabel);
 		
-		frame.setSize(500, 500);
+		frame.setSize(500, 450);
 		frame.setVisible(true);
 		
 		textfield.requestFocus();
